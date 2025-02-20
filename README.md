@@ -15,10 +15,10 @@ The goal of the project is to build an **ELT pipeline** that extracts data from 
 	* Transforming the staging tables data to dimensional tables
 
 ### create_tables.py
-#### The file will execute the droping and creation  of the staging and the dimensional tables that will be used for this project
+#### The file will execute the dropping and creation  of the staging and the dimensional tables that will be used for this project
 
 1. `drop_tables`
-    * Droping the tables if they already exist
+    * Dropping the tables if they already exist
 2. `create_tables`
     * Creating the tables
 
@@ -35,8 +35,8 @@ The goal of the project is to build an **ELT pipeline** that extracts data from 
     * a variable containing the `INSERT INTO TABLE` queries
 
 
-## The Tables Architucture
-in this section i will showcase the tables defination and their columns
+## The Tables Architecture
+in this section, I will showcase the tables definitions and their columns
 ### The Staging tables
 ```
 staging_events
