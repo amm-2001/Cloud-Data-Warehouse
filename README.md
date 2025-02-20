@@ -1,7 +1,7 @@
 # Cloud-Data-Warehouse
 
 ## Project Goal
-The goal of the project is to build an **ELT pipeline** that extracts data from CSV that are stored in a **S3 bucket**, load them into a **Redshift Cluster** , and then transforming the data into **dimensional tables** that exist inside a database , this will help Sparkify analytics team to understand what songs their users love to hear.
+The project's goal is to build an ***ELT pipeline*** that extracts data from CSV stored in an ***S3 bucket***, loads them into a ***Redshift Cluster***, and then transforms the data into ***dimensional tables*** inside a database.
 
 
 ## Explaining each file
