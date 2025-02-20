@@ -75,48 +75,53 @@ staging_songs
 ### The Fact table 
 ```
 songplays
-    songplay_id INT IDENTITY(0,1),
-    start_time TIMESTAMP,
-    user_id INT,
-    level VARCHAR,
-    song_id VARCHAR,
-    artist_id VARCHAR,
-    session_id INT,
-    location TEXT,
-    user_agent TEXT
+    songplay_id INT Not NULL IDENTITY(0,1),
+        start_time TIMESTAMP NOT NULL,
+        user_id INT Not NULL,
+        level VARCHAR,
+        song_id VARCHAR NOT NULL,
+        artist_id VARCHAR NOT NULL,
+        session_id INT NOT NULL,
+        location TEXT,
+        user_agent TEXT,
+        PRIMARY KEY(songplay_id)
 ```
 
 ### The Dimension tables
 ```
 users
-    user_id INT,
-    first_name VARCHAR,
-    last_name VARCHAR,
-    gender CHAR(1),
-    level VARCHAR
+    user_id INT Not NULL,
+        first_name VARCHAR NOT NULL,
+        last_name VARCHAR NOT NULL,
+        gender CHAR(1) NOT NULL,
+        level VARCHAR,
+        PRIMARY KEY(user_id)
 
 songs
-    song_id VARCHAR,
-    title VARCHAR,
-    artist_id VARCHAR,
-    year INT,
-    duration FLOAT
+    song_id VARCHAR NOT NULL,
+        title VARCHAR,
+        artist_id VARCHAR NOT NULL,
+        year INT,
+        duration FLOAT,
+        PRIMARY KEY(song_id)
 
 artists
-    artist_id VARCHAR,
-    name VARCHAR,
-    location TEXT ,
-    latitude FLOAT ,
-    longitude FLOAT
+   artist_id VARCHAR NOT NULL,
+        name VARCHAR,
+        location TEXT ,
+        latitude FLOAT ,
+        longitude FLOAT,
+        PRIMARY KEY(artist_id)
 
 time
-    start_time TIMESTAMP,
-    hour INT,
-    day INT,
-    week INT,
-    month INT,
-    year INT,
-    weekday VARCHAR
+   start_time TIMESTAMP NOT NULL,
+        hour INT,
+        day INT,
+        week INT,
+        month INT,
+        year INT,
+        weekday VARCHAR,
+        PRIMARY KEY(start_time)
 ```
 
 ## Example queries
