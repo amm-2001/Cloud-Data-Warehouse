@@ -4,18 +4,21 @@ from sql_queries import copy_table_queries, insert_table_queries
 
 
 def load_staging_tables(cur, conn):
+    """ Loading the data from S3 buckets to the Redshift staging tables """
     for query in copy_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def insert_tables(cur, conn):
+    """ Transforming the staging tables data to dimensional tables """
     for query in insert_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def main():
+    """executing the above functions"""
     config = configparser.ConfigParser()
     config.read('dwh.cfg')
 
