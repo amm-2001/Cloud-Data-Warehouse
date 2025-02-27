@@ -1,8 +1,5 @@
 # Cloud-Data-Warehouse
 
-Building an ***ELT pipeline*** that extracts data from CSV stored in an ***S3 bucket***, loads them into a ***Redshift Cluster***, and then transforms the data into ***dimensional tables*** inside a database.
-
-
 ## Explaining each file
 
 ### etl.py
